@@ -7,7 +7,7 @@ import {
   createUserContent,
   createPartFromUri,
 } from "@google/genai";
-const ai = new GoogleGenAI({ apiKey: AIzaSyAVvgKim9IZYOCe7nfU1bjkBZH9AHxQ1ac  });
+const ai = new GoogleGenAI({ apiKey: "AIzaSyAVvgKim9IZYOCe7nfU1bjkBZH9AHxQ1ac"  });
 function App() {
   const [messages,setmessages]=useState([]);
   function addmessage(message){
