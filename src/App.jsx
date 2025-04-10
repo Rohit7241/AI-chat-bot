@@ -16,22 +16,11 @@ function App() {
   async function onsend(content ){
     addmessage({role:"user",content});
     try {
-      const response = await ai.models.generateContentStream({
+      const response = await ai.models.generateContent({
         model: "gemini-1.5-flash-8b",
         contents: content,
       })
-
-    for await (const chunk of response) {
-      setmessages((prevMessages) => {
-        const updatedMessages = [...prevMessages];
-        const lastMessage = updatedMessages[updatedMessages.length - 1];
-        if (lastMessage.role === "assistant") {
-          lastMessage.content += chunk.text;
-        }
-        return updatedMessages;
-      })
-     
-    }
+      addmessage({role:"assistant",content:response.candidates[0].content.parts[0].text}); 
      
     } catch (error) {
       addmessage({role:"system",content:"Sorry, the request coudnt be processed "});    
