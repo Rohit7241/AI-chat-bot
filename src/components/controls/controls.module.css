@@ -1,0 +1,39 @@
+.button img{
+    fill:#f3f3f3;
+    height:36px;
+    width:36px;
+}
+.button{
+    display: flex;
+    justify-content: center;
+   align-items: center;
+   width: 50px;
+   height: 34px;
+   outline:none;
+   color:rgb(255, 255, 255);
+   background-color: #fb4c4c;
+   box-shadow:2px 2px rgb(241, 130, 130);
+   border-radius: 10%;
+}
+.controls{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width:100%;
+}
+.textareacontainer{
+    flex-grow: 1;
+    padding: 8px 16px;;
+    line-height: 0;
+    border-radius:16px;
+    
+background: #f3f3f3;
+}
+.textarea{
+    width:100%;
+    height:100%;
+    border:none;
+    outline:none;
+    resize:none;color: black;
+    background-color: #ffffff;
+}

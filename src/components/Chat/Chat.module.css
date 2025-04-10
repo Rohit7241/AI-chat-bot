@@ -1,0 +1,21 @@
+.message{
+    width: 90%;
+    height:fit-content;
+    padding:0 16px;
+    border-radius: 16px;
+    font-size: 14px;
+    margin-top: 20px;
+
+    &[data-role="user"]{
+        align-self:flex-end ;
+        background-color:#f3f3f3 ;
+    }
+}
+.chat{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    height: 100%;
+    padding: 8px;
+    overflow-y:auto ;
+}
